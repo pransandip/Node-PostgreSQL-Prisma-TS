@@ -1,0 +1,19 @@
+{
+  "name": "node-postgresql-prisma-ts",
+  "version": "1.0.0",
+  "description": "testing ts server to check connection postgresql with prisma",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pransandip/Node-PostgreSQL-Prisma-TS.git"
+  },
+  "author": "SANDY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pransandip/Node-PostgreSQL-Prisma-TS/issues"
+  },
+  "homepage": "https://github.com/pransandip/Node-PostgreSQL-Prisma-TS#readme"
+}
