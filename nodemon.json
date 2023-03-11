@@ -2,7 +2,7 @@
   "watch": ["src"],
   "ext": "ts,js,json",
   "ignore": ["node_modules", "dist", "__tests__", "coverage"],
-  "exec": "npx nodemon ./src/index.ts",
+  "exec": "ts-node --esm src/index.ts",
   "restartable": "rs",
   "env": {
     "NODE_ENV": "development"

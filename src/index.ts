@@ -1,7 +1,7 @@
 import express, { Express, Request, Response } from "express";
 
 const app: Express = express();
-const PORT = 4000;
+const PORT = 4002;
 let count = 0;
 
 app.get("/", (req: Request, res: Response) => {

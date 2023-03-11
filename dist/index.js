@@ -10,4 +10,5 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`TS: server is running on port 🚀 ${PORT}.`);
 });
+export const newObj = { name: "sandy" };
 //# sourceMappingURL=index.js.map
