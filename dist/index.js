@@ -1,14 +1,15 @@
-import express from "express";
-const app = express();
-const PORT = 4000;
-let count = 0;
-app.get("/", (req, res) => {
-    count += 1;
-    console.log(`IP: ${req.ip} hits server: ${count} time.`);
-    res.status(200).json({ msg: "healthy" });
+import { prisma } from "./prisma/prisma.client.js";
+async function main() {
+    const user = await prisma.user.create({
+        data: { name: "Sally kai" },
+    });
+    console.log(user);
+}
+main()
+    .catch((e) => {
+    console.log(e.message);
+})
+    .finally(async () => {
+    await prisma.$disconnect();
 });
-app.listen(PORT, () => {
-    console.log(`TS: server is running on port 🚀 ${PORT}.`);
-});
-export const newObj = { name: "sandy" };
 //# sourceMappingURL=index.js.map

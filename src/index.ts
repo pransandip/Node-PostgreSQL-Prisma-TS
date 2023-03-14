@@ -1,7 +1,8 @@
 import { prisma } from "./prisma/prisma.client.js";
 
 async function main() {
-  // * you will write your Prisma Client queries here
+  const user = await prisma.user.findMany();
+  console.log(user);
 }
 
 main()
