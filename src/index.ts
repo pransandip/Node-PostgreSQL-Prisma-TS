@@ -1,7 +1,21 @@
 import { prisma } from "./prisma/prisma.client.js";
 
 async function main() {
-  const user = await prisma.user.findMany();
+  await prisma.user.deleteMany();
+  const user = await prisma.user.create({
+    data: {
+      name: "Sandy",
+      email: "pransandip@gmail.com",
+      age: 28,
+      userPreference: {
+        create: { emailUpdates: true },
+      },
+    },
+    select: {
+      name: true,
+      userPreference: { select: { id: true } },
+    },
+  });
   console.log(user);
 }
 
